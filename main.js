@@ -6,6 +6,13 @@ const port = 3888
 global.fetch = require("node-fetch");
 app.use(bodyParser.json())
 
+// check health, useful in CI
+app.get("/health", (req, res) => {
+    res.json({
+        status: "Alive"
+    })
+})
+
 // Accepts authentication data 
 app.post('/', async (req, res) => {
     const poolId = req.body.pool_id
