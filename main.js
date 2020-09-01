@@ -73,42 +73,4 @@ var Login = async (username, password, poolId, clientId) => {
             reject(error)
         }
     })
-
-    // cognitoUser.authenticateUser(authenticationDetails, {
-    //     onSuccess: async result => {
-    //         const token = await result.getAccessToken().getJwtToken()
-    //         console.log("\nAccess token [" + title + "] \n" + token);
-    //         //console.log("\nid token + " + result.getIdToken().getJwtToken());
-    //         //console.log("\nrefresh token + " + result.getRefreshToken().getToken());
-
-
-    //         // OBTIANING IDENTITY ID
-    //         // var idToken = result.idToken.jwtToken;
-    //         // AWS.config.region = 'eu-west-1';
-    //         // AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    //         //     IdentityPoolId: 'eu-west-1:2bfc304d-6745-42e0-bcb1-31649438afb6',
-    //         //     Logins: {
-    //         //         'cognito-idp.eu-west-1.amazonaws.com/eu-west-1_4q8N6FQnp': idToken
-    //         //     }
-    //         // });
-
-    //         // AWS.config.credentials.get(function(err) {
-    //         //   if (err) return console.error(err);
-    //         //   else console.log(AWS.config.credentials.params.IdentityId);
-
-    //         //   var s3 = new AWS.S3({
-    //         //       apiVersion: '2006-03-01',
-    //         //       params: {Bucket: 'art-tech-bucket'}
-    //         //   });
-
-    //         //   s3.listObjects({Delimiter: '/'}, function(err, data) {
-    //         //       //console.log(err, data)
-    //         //   });
-    //         //});
-
-    //     },
-    //     onFailure: function (err) {
-    //         console.log(err);
-    //     },
-    // });
 }
